@@ -1,0 +1,266 @@
+{
+  "targets": [
+    {
+      "isStage": true,
+      "name": "Stage",
+      "variables": {
+        "`jEk@4|i[#Fk?(8x)AV.-my variable": [
+          "my variable",
+          0
+        ],
+        "a": [
+          "a",
+          0
+        ],
+        "b": [
+          "b",
+          0
+        ],
+        "sum": [
+          "sum",
+          0
+        ]
+      },
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {},
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
+          "name": "backdrop1",
+          "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 240,
+          "rotationCenterY": 180
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "name": "pop",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 44100,
+          "sampleCount": 1032,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 0,
+      "tempo": 60,
+      "videoTransparency": 50,
+      "videoState": "on",
+      "textToSpeechLanguage": null
+    },
+    {
+      "isStage": false,
+      "name": "Sprite1",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "uT|+bJSmc/y:{n^AY!M4": {
+          "opcode": "event_whenflagclicked",
+          "next": "H=h;0FO^oaQgG.Z}aT([",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 44,
+          "y": 28
+        },
+        "H=h;0FO^oaQgG.Z}aT([": {
+          "opcode": "sensing_askandwait",
+          "next": "xG/GO^k?J3?Phr.IB*,=",
+          "parent": "uT|+bJSmc/y:{n^AY!M4",
+          "inputs": {
+            "QUESTION": [
+              1,
+              [
+                10,
+                "Enter first number:"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "xG/GO^k?J3?Phr.IB*,=": {
+          "opcode": "data_setvariableto",
+          "next": "HD{7]-KLl9j{d-C|%+}R",
+          "parent": "H=h;0FO^oaQgG.Z}aT([",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                [
+                  12,
+                  "answer"
+                ]
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "a",
+              "a"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "HD{7]-KLl9j{d-C|%+}R": {
+          "opcode": "sensing_askandwait",
+          "next": "/~*p8x`PYQQsL{Dl]c,~",
+          "parent": "xG/GO^k?J3?Phr.IB*,=",
+          "inputs": {
+            "QUESTION": [
+              1,
+              [
+                10,
+                "Enter second number:"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "/~*p8x`PYQQsL{Dl]c,~": {
+          "opcode": "data_setvariableto",
+          "next": "M}T/kUUY2bc;oQM;H%I{",
+          "parent": "HD{7]-KLl9j{d-C|%+}R",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                10,
+                [
+                  12,
+                  "answer"
+                ]
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "b",
+              "b"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "M}T/kUUY2bc;oQM;H%I{": {
+          "opcode": "data_setvariableto",
+          "next": "WkKC|=LT7*ziX8*T2|Gx",
+          "parent": "/~*p8x`PYQQsL{Dl]c,~",
+          "inputs": {
+            "VALUE": [
+              1,
+              [
+                4,
+                [
+                  10,
+                  [
+                    12,
+                    "a"
+                  ]
+                ],
+                [
+                  10,
+                  [
+                    12,
+                    "b"
+                  ]
+                ]
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "sum",
+              "sum"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "WkKC|=LT7*ziX8*T2|Gx": {
+          "opcode": "looks_say",
+          "next": null,
+          "parent": "M}T/kUUY2bc;oQM;H%I{",
+          "inputs": {
+            "MESSAGE": [
+              1,
+              [
+                10,
+                [
+                  12,
+                  "sum"
+                ]
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "bcf454acf82e4504149f7ffe07081dbc",
+          "name": "costume1",
+          "bitmapResolution": 1,
+          "md5ext": "bcf454acf82e4504149f7ffe07081dbc.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 48,
+          "rotationCenterY": 50
+        },
+        {
+          "assetId": "0fb9be3e8397c983338cb71dc84d0b25",
+          "name": "costume2",
+          "bitmapResolution": 1,
+          "md5ext": "0fb9be3e8397c983338cb71dc84d0b25.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 46,
+          "rotationCenterY": 53
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83c36d806dc92327b9e7049a565c6bff",
+          "name": "Meow",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 44100,
+          "sampleCount": 37376,
+          "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 1,
+      "visible": true,
+      "x": 0,
+      "y": 0,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    }
+  ],
+  "monitors": [],
+  "extensions": [],
+  "meta": {
+    "semver": "3.0.0",
+    "vm": "0.2.0-prerelease.20191016171810",
+    "agent": "A+B Program for Scratch3"
+  }
+}
