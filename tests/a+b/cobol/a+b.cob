@@ -6,6 +6,7 @@
        01 NUM2        PIC 9(10).
        01 RESULT      PIC 9(10).
        01 INPUT-LINE  PIC X(100).
+       01 DISPLAY-RESULT PIC Z(4).
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
            ACCEPT INPUT-LINE
@@ -13,5 +14,6 @@
                INTO NUM1, NUM2
            END-UNSTRING
            COMPUTE RESULT = NUM1 + NUM2
-           DISPLAY RESULT
+           MOVE FUNCTION NUMVAL (RESULT) TO DISPLAY-RESULT
+           DISPLAY DISPLAY-RESULT
            STOP RUN.

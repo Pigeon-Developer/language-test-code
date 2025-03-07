@@ -3,5 +3,5 @@ program aplusb
     integer :: a, b
     
     read(*, *) a, b
-    write(*, *) a + b
+    write(*, '(I0)') a + b
 end program aplusb

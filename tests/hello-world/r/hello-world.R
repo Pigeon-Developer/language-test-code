@@ -1,2 +1,2 @@
 # Simple R program to output "Hello World!"
-print("Hello World!")
+cat("Hello World!\n")
