@@ -5,20 +5,27 @@ int main(int argc, const char * argv[]) {
         NSFileHandle *input = [NSFileHandle fileHandleWithStandardInput];
         NSData *inputData = [input availableData];
         NSString *inputString = [[NSString alloc] initWithData:inputData encoding:NSUTF8StringEncoding];
-        
-        // Trim whitespace and newlines
+
+
         inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        // Split the input string by space
+
+  
         NSArray *components = [inputString componentsSeparatedByString:@" "];
-        
-        if ([components count] >= 2) {
-            NSInteger a = [[components objectAtIndex:0] integerValue];
-            NSInteger b = [[components objectAtIndex:1] integerValue];
-            NSInteger sum = a + b;
-            
-            NSLog(@"%ld", (long)sum);
+        if ([components count] != 2) {
+            return 1;
         }
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        NSNumber *number1 = [formatter numberFromString:[components objectAtIndex:0]];
+        NSNumber *number2 = [formatter numberFromString:[components objectAtIndex:1]];
+
+        if (number1 == nil || number2 == nil) {
+  
+            return 1;
+        }
+
+        int sum = [number1 intValue] + [number2 intValue];
+
+        printf("%d", sum);
     }
     return 0;
 }
