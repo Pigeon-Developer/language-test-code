@@ -1,3 +1,5 @@
+(use-modules (ice-9 rdelim))  ; Guile Scheme
+
 (define (read-numbers)
   (let* ((line (read-line))
          (numbers (string-split line #\space)))
